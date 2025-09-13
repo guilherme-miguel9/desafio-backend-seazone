@@ -19,7 +19,7 @@ class PropertiesCreate(BaseModel):
 
 
 # Esquema para criação de uma nova reserva:
-class Reservation(BaseModel):
+class ReservationCreate(BaseModel):
     property_id: int
     client_name: str
     client_email: str
