@@ -9,7 +9,7 @@ import os
 from logging.config import fileConfig
 from sqlalchemy import MetaData
 
-from app.models import Base
+from app.db.models import Base
 
 load_dotenv() #carregar o .env
 config = context.config
