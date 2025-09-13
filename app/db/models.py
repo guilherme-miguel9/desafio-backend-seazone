@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Float
+from sqlalchemy import Column, Integer, String, Float, ForeignKey, Date
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
@@ -19,4 +19,15 @@ class Properties(Base):
     capacity = Column(Integer, nullable = False)
     price_per_night = Column(Float, nullable = False)
 
+
+class Reservation(Base):
+    __tablename__ = 'reservations'
+
+    id = Column(Integer, primary_key=True, index=True)
+    property_id = Column(Integer, ForeignKey("properties.id"), nullable=False)
+    client_name = Column(String, nullable=False)
+    client_email = Column(String, nullable=False)
+    start_date = Column(Date, nullable=False)
+    end_date = Column(Date, nullable=False)
+    guests_quantity = Column(Integer, nullable=False)
 
