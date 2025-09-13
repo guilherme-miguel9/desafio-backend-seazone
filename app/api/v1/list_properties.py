@@ -15,10 +15,13 @@ def list_properties(list_all: bool = Query(False, description="Selecione entre T
                     capacity: int = Query(None, description="Filtrar propriedades por capacidade"),
                     price_max: float = Query(None, description="Filtrar propriedades por preço máximo"),
                     db: Session = Depends(get_db)):
+    
+    #Listagem de todos as propriedades caso list_all seja escolhido como true
     if list_all:
         properties_list = db.query(Properties).all()
         return properties_list
-     
+    
+    #Filtros
     filters = []
 
     if neighborhood:
