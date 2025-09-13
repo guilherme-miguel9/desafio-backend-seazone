@@ -16,3 +16,16 @@ class PropertiesCreate(BaseModel):
 
     class Config:
         orm_mode = True
+
+
+# Esquema para criação de uma nova reserva:
+class Reservation(BaseModel):
+    property_id: int
+    client_name: str
+    client_email: str
+    start_date: str
+    end_date: str
+    guests_quantity: int
+
+    class Config:
+        orm_mode = True
