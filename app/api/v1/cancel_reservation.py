@@ -9,7 +9,7 @@ router = APIRouter()
 def cancel_reservation(reservation_id: int = Query(..., description="ID da reserva para ser cancelada"),
                        db: Session = Depends(get_db)):
     
-    reservation = db.query(Reservation).filter(Reservation.id == reservation_id).first()
+    reservation = db.query(Reservation).filter(Reservation.property_id == reservation_id).first()
 
     if not reservation:
         raise HTTPException(status_code=404, detail='Reserva nao foi encontrada')

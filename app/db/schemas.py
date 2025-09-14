@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-
+from datetime import date
 
 # Esquema para criação de uma nova propriedade:
 class PropertiesCreate(BaseModel):
@@ -23,8 +23,8 @@ class ReservationCreate(BaseModel):
     property_id: int
     client_name: str
     client_email: str
-    start_date: str
-    end_date: str
+    start_date: date
+    end_date: date
     guests_quantity: int
 
     class Config:

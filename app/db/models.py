@@ -30,4 +30,5 @@ class Reservation(Base):
     start_date = Column(Date, nullable=False)
     end_date = Column(Date, nullable=False)
     guests_quantity = Column(Integer, nullable=False)
+    total_price = Column(Float, nullable=False)
 
