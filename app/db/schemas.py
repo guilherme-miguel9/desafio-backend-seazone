@@ -15,8 +15,13 @@ class PropertiesCreate(BaseModel):
     price_per_night: int
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
+class PropertiesResponse(PropertiesCreate):
+    id: int
+
+    class Config:
+        from_attributes = True
 
 # Esquema para criação de uma nova reserva:
 class ReservationCreate(BaseModel):
@@ -28,4 +33,4 @@ class ReservationCreate(BaseModel):
     guests_quantity: int
 
     class Config:
-        orm_mode = True
+        from_attributes = True

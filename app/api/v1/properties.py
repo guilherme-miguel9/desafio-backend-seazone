@@ -3,10 +3,11 @@ from sqlalchemy.orm import Session
 from app.db.database import get_db  
 from app.db.models import Properties
 from app.db.schemas import PropertiesCreate
+from app.db.schemas import PropertiesResponse
 
 router = APIRouter()
 
-@router.post("/properties/", status_code=201, response_model=PropertiesCreate)
+@router.post("/properties/", status_code=201, response_model=PropertiesResponse)
 def create_property(property: PropertiesCreate, db: Session = Depends(get_db)):
     new_property = Properties(
         title=property.title,
@@ -23,4 +24,5 @@ def create_property(property: PropertiesCreate, db: Session = Depends(get_db)):
     
     db.add(new_property)
     db.commit()
+    db.refresh(new_property)
     return new_property
