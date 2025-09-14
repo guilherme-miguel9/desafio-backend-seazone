@@ -34,3 +34,11 @@ class ReservationCreate(BaseModel):
 
     class Config:
         from_attributes = True
+
+
+class ReservationResponse(ReservationCreate):
+    id: int
+    total_price: float
+
+    class Config:
+        from_attributes = True

@@ -4,11 +4,13 @@ from sqlalchemy.orm import Session
 from sqlalchemy import or_, not_
 from app.db.models import Reservation
 from app.db.schemas import ReservationCreate
+from app.db.schemas import ReservationResponse
 from app.db.models import Properties
+
 
 router = APIRouter()
 
-@router.post("/reservation/", status_code=201)
+@router.post("/reservation/", status_code=201, response_model=ReservationResponse)
 def create_reservation(reservation: ReservationCreate, db: Session = Depends(get_db)):
 
     property = db.query(Properties).filter(Properties.id == reservation.property_id).first()
@@ -50,4 +52,5 @@ def create_reservation(reservation: ReservationCreate, db: Session = Depends(get
 
     db.add(new_reservation)
     db.commit()
+    db.refresh(new_reservation)
     return new_reservation
