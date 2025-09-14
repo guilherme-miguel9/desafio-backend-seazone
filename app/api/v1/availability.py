@@ -3,14 +3,15 @@ from sqlalchemy.orm import Session
 from sqlalchemy import or_, not_
 from app.db.database import get_db
 from app.db.models import Reservation
+from datetime import date
 
 router = APIRouter()
 
 
-@router.get("/availability/", status_code=200)
+@router.get("/properties/availability", status_code=200)
 def check_availability(property_id: int = Query(..., description="ID da propriedade para verificar disponibilidade"),
-                       start_date: str = Query(..., description="Data de início no formato YYYY-MM-DD"),
-                       end_date: str = Query(..., description="Data de término no formato YYYY-MM-DD"),
+                       start_date: date = Query(..., description="Data de início no formato YYYY-MM-DD"),
+                       end_date: date = Query(..., description="Data de término no formato YYYY-MM-DD"),
                        db: Session = Depends(get_db)):
     
     conflicting_reservation = db.query(Reservation).filter(

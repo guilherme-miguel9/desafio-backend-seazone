@@ -1,12 +1,12 @@
-from fastapi import APIRouter, Depends, HTTPException, Query
+from fastapi import APIRouter, Depends, HTTPException, Path
 from sqlalchemy.orm import Session
 from app.db.database import get_db
 from app.db.models import Reservation
 
 router = APIRouter()
 
-@router.delete("/cancel_reservation/", status_code=204)
-def cancel_reservation(reservation_id: int = Query(..., description="ID da reserva para ser cancelada"),
+@router.delete("/reservation/{reservation_id}", status_code=204)
+def cancel_reservation(reservation_id: int = Path(..., description="ID da reserva a ser cancelada"),
                        db: Session = Depends(get_db)):
     
     reservation = db.query(Reservation).filter(Reservation.id == reservation_id).first()
