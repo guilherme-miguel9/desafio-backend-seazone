@@ -5,7 +5,7 @@ from datetime import date
 class PropertiesCreate(BaseModel):
     title: str
     address_street: str
-    address_number: int
+    address_number: str
     address_neighborhood: str
     address_city: str
     address_state: str

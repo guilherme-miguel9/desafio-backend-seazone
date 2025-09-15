@@ -10,7 +10,7 @@ def create_property():
     payload = {
         "title": "Casa de Férias Algarve",
         "address_street": "Av Github",
-        "address_number": 2024,
+        "address_number": "2024",
         "address_neighborhood": "Jurerê", 
         "address_city": "Florianópolis", 
         "address_state": "SC", 

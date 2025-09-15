@@ -10,7 +10,7 @@ class Properties(Base):
     id = Column(Integer, primary_key = True, index = True)
     title = Column(String, index = True, nullable = False)
     address_street = Column(String, nullable = False)
-    address_number = Column(Integer, nullable = False)
+    address_number = Column(String, nullable = False)
     address_neighborhood = Column(String, nullable = False)
     address_city = Column(String, nullable = False)
     address_state = Column(String, nullable = False)
