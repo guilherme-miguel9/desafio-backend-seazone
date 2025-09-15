@@ -19,7 +19,7 @@ app/<br>
 │<br>
 docker/<br>
 │      └── docker-compose.yaml<br>
-│<br>      
+│   
 tests/<br>
 │      ├── test_availability.py<br>
 │      ├── test_create_properties.py<br>
