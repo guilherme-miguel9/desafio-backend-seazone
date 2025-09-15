@@ -3,33 +3,33 @@ DESAFIO BACKEND DA SEAZONE (APENAS PARA O DESAFIO PROMOVIDO PARA A EMPRESA SEAZO
 
 ## Arquitetura de Pastas
 
-app/
-├── api/
-│    ├── v1/
-│          ├── availability.py
-│          ├── cancel_reservation.py
-│          ├── list_properties.py
-│          ├── properties.py
-│          └── reservation.py
-├── db/
-│      ├── database.py
-│      ├── models.py
-│      └── schemas.py
-├── main.py
-│
-docker/
-│      └── docker-compose.yaml
-│      
-tests/
-│      ├── test_availability.py
-│      ├── test_create_properties.py
-│      └── test_reservation_and_cancel.py
-│
-.env.exemplo (Duplicar na pasta do Docker!!)
-.gitignore
-alembic.ini
-README.md
-requirements.txt
+app/<br>
+├── api/<br>
+│    ├── v1/<br>
+│          ├── availability.py<br>
+│          ├── cancel_reservation.py<br>
+│          ├── list_properties.py<br>
+│          ├── properties.py<br>
+│          └── reservation.py<br>
+├── db/<br>
+│      ├── database.py<br>
+│      ├── models.py<br>
+│      └── schemas.py<br>
+├── main.py<br>
+│<br>
+docker/<br>
+│      └── docker-compose.yaml<br>
+│<br>      
+tests/<br>
+│      ├── test_availability.py<br>
+│      ├── test_create_properties.py<br>
+│      └── test_reservation_and_cancel.py<br>
+│<br>
+.env.exemplo (Duplicar na pasta do Docker!!)<br>
+.gitignore<br>
+alembic.ini<br>
+README.md<br>
+requirements.txt<br>
 
 ## Endpoints Principais:
 
