@@ -69,14 +69,18 @@ OPCIONAL: Recomendo criar uma .venv para o projeto, pois o Python pode utilizar 
 `py 3.11 -m venv .venv (Win)` ou `python 3.11 -m venv .venv (MacOS ou Linux)` 
 
 ATIVAR O AMBIENTE VIRTUAL:
-`.venv\Scripts\activate (Win` ou `source .venv/bin/activate (MacOS ou Linux)`
+`.venv\Scripts\activate (Win)` ou `source .venv/bin/activate (MacOS ou Linux)`
 
+ATIVAR O DOCKER:
 Utilizar o comando - `docker compose up` (Dentro da pasta do Docker no projeto), essa aplicação sobe o banco de dados (Lembrando que o .env.exemplo deve ser duplicado para essa pasta também, é importante já que o docker não está na raiz do projeto).
 
+ATIVAR OS SERVIÇOS WEB:
 Para subir o web utilize `uvicorn app.main:app --reload` (Geralmente o Swagger vai estar na porta 8000 | http://localhost:8000/docs)
 
+INSTALAR OS REQUIREMENTS DO PYTHON:  
 Deixei um arquivo .txt para os requirements do Python, para utilizar basta digitar no terminal `pip install -r requirements.txt` (Isso é importante, porque o Python pode ter versões diferentes dependendo de quando for instalar)
 
+COMANDO PARA UTILIZAR O PYTEST (APENAS WINDOWS):
 Para rodar os testes automatizados vai ter que utilizar o comando que deixei logo abaixo, porque ele está dentro de uma pasta tests e não na raiz do projeto:<br>
 `$env:PYTHONPATH = "$PWD"                                                                                      
 pytest tests/`          
