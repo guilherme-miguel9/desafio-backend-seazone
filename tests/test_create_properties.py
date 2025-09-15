@@ -5,7 +5,8 @@ from app.main import app
 client = TestClient(app)
 
 # Teste de criação de uma nova propriedade, utilizei valores ficticios do proprio desafio.
-def test_create_property():
+@pytest.fixture
+def create_property():
     payload = {
         "title": "Casa de Férias Algarve",
         "address_street": "Av Github",
@@ -20,9 +21,9 @@ def test_create_property():
     }
 
     response = client.post("/api/v1/properties/", json=payload)
-    print(response.json())
     assert response.status_code == 201
     data = response.json()
     assert data["title"] == payload["title"]
     assert data["address_number"] == payload["address_number"]
     assert "id" in data
+    return data
