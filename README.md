@@ -65,6 +65,12 @@ requirements.txt<br>
 
 OBS: Deverá ter um Docker instalado caso não possua para subir o banco de dados PostgreSQL, no arquivo do docker configurei uma visão do banco de dados como se fosse o PGAdmin, as credenciais estão no .env.exemplo).
 
+OPCIONAL: Recomendo criar uma .venv para o projeto, pois o Python pode utilizar o interpretador errado!
+`py 3.11 -m venv .venv (Win)` ou `python 3.11 -m venv .venv (MacOS ou Linux)` 
+
+ATIVAR O AMBIENTE VIRTUAL:
+`.venv\Scripts\activate (Win` ou `source .venv/bin/activate (MacOS ou Linux)`
+
 Utilizar o comando - `docker compose up` (Dentro da pasta do Docker no projeto), essa aplicação sobe o banco de dados (Lembrando que o .env.exemplo deve ser duplicado para essa pasta também, é importante já que o docker não está na raiz do projeto).
 
 Para subir o web utilize `uvicorn app.main:app --reload` (Geralmente o Swagger vai estar na porta 8000 | http://localhost:8000/docs)
