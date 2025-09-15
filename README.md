@@ -8,7 +8,7 @@ app/<br>
 │    ├── v1/<br>
 │          ├── availability.py<br>
 │          ├── cancel_reservation.py<br>
-│          ├── delete_property.py<br> [Não solicitado no enunciado, porém achei interessante acrescentar]
+│          ├── delete_property.py [Não solicitado no enunciado, porém achei interessante acrescentar]<br>
 │          ├── list_properties.py<br>
 │          ├── properties.py<br>
 │          └── reservation.py<br>
