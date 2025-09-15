@@ -63,7 +63,7 @@ requirements.txt<br>
 
 ## Como utilizar da melhor forma (Deixei esse campo para facilitar o uso da API):
 
-OBS: Deverá ter um Docker instalado caso não possua para subir o banco de dados PostgreSQL, no arquivo do docker configurei uma visão do banco de dados como se fosse o PGAdmin, as credenciais estão no .env.exemplo).
+OBS: Deverá ter um Docker instalado na máquina para subir o banco de dados PostgreSQL, no arquivo do docker configurei uma visão do banco de dados como se fosse o PGAdmin, as credenciais estão no .env.exemplo).
 
 OPCIONAL: Recomendo criar uma .venv para o projeto, pois o Python pode utilizar o interpretador errado!<br>
 `py 3.11 -m venv .venv (Win)` ou `python 3.11 -m venv .venv (MacOS ou Linux)` 
