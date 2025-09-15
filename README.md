@@ -65,12 +65,12 @@ requirements.txt<br>
 
 OBS: Deverá ter um Docker instalado caso não possua para subir o banco de dados PostgreSQL, no arquivo do docker configurei uma visão do banco de dados como se fosse o PGAdmin, as credenciais estão no .env.exemplo).
 
-Utilizar o comando - docker compose up (Dentro da pasta do Docker no projeto), essa aplicação sobe o banco de dados (Lembrando que o .env.exemplo deve ser duplicado para essa pasta também, é importante já que o docker não está na raiz do projeto).
+Utilizar o comando - `docker compose up` (Dentro da pasta do Docker no projeto), essa aplicação sobe o banco de dados (Lembrando que o .env.exemplo deve ser duplicado para essa pasta também, é importante já que o docker não está na raiz do projeto).
 
-Para subir o web utilize uvicorn app.main:app --reload (Geralmente o Swagger vai estar na porta 8000 | http://localhost:8000/docs)
+Para subir o web utilize `uvicorn app.main:app --reload` (Geralmente o Swagger vai estar na porta 8000 | http://localhost:8000/docs)
 
 Deixei um arquivo .txt para os requirements do Python, para utilizar basta digitar no terminal `pip install -r requirements.txt` (Isso é importante, porque o Python pode ter versões diferentes dependendo de quando for instalar)
 
-Para rodar os testes automatizados vai ter que utilizar o comando que deixei logo abaixo, porque ele está dentro de uma pasta tests e não na raiz do projeto:
-$env:PYTHONPATH = "$PWD"                                                                                      
-pytest tests/             
+Para rodar os testes automatizados vai ter que utilizar o comando que deixei logo abaixo, porque ele está dentro de uma pasta tests e não na raiz do projeto:<br>
+`$env:PYTHONPATH = "$PWD"                                                                                      
+pytest tests/`          
