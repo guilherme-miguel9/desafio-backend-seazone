@@ -8,6 +8,7 @@ app/<br>
 │    ├── v1/<br>
 │          ├── availability.py<br>
 │          ├── cancel_reservation.py<br>
+│          ├── delete_property.py<br> [Não solicitado no enunciado, porém achei interessante acrescentar]
 │          ├── list_properties.py<br>
 │          ├── properties.py<br>
 │          └── reservation.py<br>
@@ -21,8 +22,10 @@ docker/<br>
 │      └── docker-compose.yaml<br>
 │   
 tests/<br>
+│      ├── conftest.py<br>
 │      ├── test_availability.py<br>
 │      ├── test_create_properties.py<br>
+│      ├── test_delete_property.py<br>
 │      ├── test_list_properties.py<br>
 │      ├── test_list_reservations.py<br>
 │      └── test_reservation_and_cancel.py<br>
