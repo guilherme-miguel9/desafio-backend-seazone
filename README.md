@@ -23,6 +23,8 @@ docker/<br>
 tests/<br>
 │      ├── test_availability.py<br>
 │      ├── test_create_properties.py<br>
+│      ├── test_list_properties.py<br>
+│      ├── test_list_reservations.py<br>
 │      └── test_reservation_and_cancel.py<br>
 │<br>
 .env.exemplo (Duplicar na pasta do Docker!!)<br>
