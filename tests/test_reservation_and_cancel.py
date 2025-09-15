@@ -4,14 +4,16 @@ from app.main import app
 from sqlalchemy.orm import Session
 from app.db.models import Reservation
 from app.db.database import SessionLocal
+from tests.test_create_properties import create_property
 
 client = TestClient(app)
 
 @pytest.fixture
-def create_reservation():
+def create_reservation(create_property):
+    property_id = create_property["id"]
 
     payload = {
-        "property_id": 1,
+        "property_id": property_id,
         "client_name": "Maria Pereira",
         "client_email": "mariapereira@example.com",
         "start_date": "2024-12-20",
