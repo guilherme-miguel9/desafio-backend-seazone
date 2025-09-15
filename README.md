@@ -3,6 +3,33 @@ DESAFIO BACKEND DA SEAZONE (APENAS PARA O DESAFIO PROMOVIDO PARA A EMPRESA SEAZO
 
 ## Arquitetura de Pastas
 
+app/
+├── api/
+│    ├── v1/
+│          ├── availability.py
+│          ├── cancel_reservation.py
+│          ├── list_properties.py
+│          ├── properties.py
+│          └── reservation.py
+├── db/
+│      ├── database.py
+│      ├── models.py
+│      └── schemas.py
+├── main.py
+│
+docker/
+│      └── docker-compose.yaml
+│      
+tests/
+│      ├── test_availability.py
+│      ├── test_create_properties.py
+│      └── test_reservation_and_cancel.py
+│
+.env.exemplo (Duplicar na pasta do Docker!!)
+.gitignore
+alembic.ini
+README.md
+requirements.txt
 
 ## Endpoints Principais:
 
@@ -38,7 +65,7 @@ DESAFIO BACKEND DA SEAZONE (APENAS PARA O DESAFIO PROMOVIDO PARA A EMPRESA SEAZO
 
 OBS: Deverá ter um Docker instalado caso não possua para subir o banco de dados PostgreSQL, no arquivo do docker configurei uma visão do banco de dados como se fosse o PGAdmin, as credenciais estão no .env.exemplo).
 
-Utilizar o comando - docker compose up (Dentro da pasta do Docker no projeto), essa aplicação sobe o banco de dados.
+Utilizar o comando - docker compose up (Dentro da pasta do Docker no projeto), essa aplicação sobe o banco de dados (Lembrando que o .env.exemplo deve ser duplicado para essa pasta também, é importante já que o docker não está na raiz do projeto).
 
 Para subir o web utilize uvicorn app.main:app --reload (Geralmente o Swagger vai estar na porta 8000 | http://localhost:8000/docs)
 
