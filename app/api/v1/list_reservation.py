@@ -5,7 +5,7 @@ from app.db.models import Reservation
 
 router = APIRouter()
 
-@router.get("/list_reservations/", status_code = 200)
+@router.get("/reservations", status_code = 200)
 def list_reservations(property_id: int = Query(None, description="Informe o ID da propriedade para listar as reservas"),
                       client_email: str = Query(None, description="Informe o email do cliente para listar as reservas"),
                       db: Session = Depends(get_db)):
